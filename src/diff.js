@@ -18,7 +18,7 @@ const recordAdded = (table, rec, ignore) => ({
 });
 
 const recordDeleted = (table, rec, ignore) => ({
-    type: 'ADD',
+    type: 'DEL',
     table,
     data: _.pickBy(rec, (v, k) => !ignore.includes(k)),
 });
@@ -35,7 +35,7 @@ const recordModified = (table, recSrc, recDst, ignore) => ({
  * @param {Object} dataSrc Source data snapshot
  * @param {Object} dataDst Target data snapshot
  * @param {Object} ignore Keys to ignore 
- * @returns {Array<{ type: String, table: String, data: Object }>} Array of differences 
+ * @returns {Array<{ type: String, table: String, data: { }>} Array of differences 
  */
 const createDiff = (dataSrc, dataDst, ignore = {}) => {
     const allTables = uniqKeys(dataSrc, dataDst);
