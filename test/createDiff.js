@@ -114,8 +114,8 @@ describe('createDiff', function() {
                 },
                 {
                     foo: {
-                        '1': { id: 2, key: 'val1', date: new Date(0) },
-                        '2': { id: 3, key: 'val2', date: new Date(0) },
+                        '2': { id: 2, key: 'val1', date: new Date(0) },
+                        '3': { id: 3, key: 'val2', date: new Date(0) },
                     },
                 }
             ));
