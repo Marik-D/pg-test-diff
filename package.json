@@ -4,7 +4,7 @@
   "description": "Package for tracking changes made to database data. Useful for snapshot unit testing.",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,10 @@
   },
   "dependencies": {
     "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "snap-shot-it": "^6.2.5"
   }
 }

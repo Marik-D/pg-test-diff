@@ -49,7 +49,7 @@ const createDiff = (dataSrc, dataDst, ignore = {}) => {
         } else if(!dataDst[table]) {
             Object.values(dataSrc[table]).forEach(rec => res.push(recordDeleted(table, rec, tIgnore)));
         } else {
-            const allIds = _.uniqKeys(dataSrc[table], dataDst[table]);
+            const allIds = uniqKeys(dataSrc[table], dataDst[table]);
             allIds.forEach((id) => {
                 if(!dataSrc[table][id]) {
                     res.push(recordAdded(table, dataDst[table][id], tIgnore));
